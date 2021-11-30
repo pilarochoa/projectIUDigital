@@ -1,11 +1,13 @@
 @extends('dashboard.master')
 
 @section('content')
-<h6>Crear publicacion</h6>
+<div class="mt-4">
+    <h3 class="mb-3">Crear publicación</h3>
 
-<form action="{{ route('post.store') }}" method="post">
-    @include('dashboard.post.form')
-    
-</form>
+    <form action="{{ route('post.store') }}" method="post">
+        @include('dashboard.post.form')
+        
+    </form>
+</div>
     
 @endsection

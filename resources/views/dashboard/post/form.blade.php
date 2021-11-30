@@ -14,7 +14,7 @@
 </div>
 
 <div>
-    <a href="{{ URL::previous()}}" class="btn btn-danger">Cancelar</a>
+    <a href="{{ url('/dashboard/post') }}" class="btn btn-danger">Cancelar</a>
     <button type="submit" class="btn btn-success">Guardar</button>
     
 </div>

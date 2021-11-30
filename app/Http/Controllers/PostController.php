@@ -15,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('dashboard.post.index');
+        $data['posts'] = Post::paginate(10);
+        return view('dashboard.post.index', $data);
     
     }
 
@@ -84,6 +85,7 @@ class PostController extends Controller
      */
     public function destroy(post $post)
     {
-        //
+        Post::destroy($post->id);
+        return back()->with('status', 'Publicación eliminada con éxito');
     }
 }
