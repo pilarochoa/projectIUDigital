@@ -13,7 +13,7 @@
             <a class="nav-link" href="/dashboard/post">Posts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/dashboard/post">Categories</a>
+            <a class="nav-link" href="/dashboard/category">Categories</a>
           </li>
         </ul>
       </div>

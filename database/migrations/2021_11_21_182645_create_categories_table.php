@@ -16,7 +16,8 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('category')->nullable()->default('text');
-            $table->text('description_category', 100)->nullable();
+            $table->enum('state', ['published', 'unpublished', 'in_review', 'received'])->nullable()->default('received');
+            $table->text('description_category',)->nullable();
             $table->timestamps();
         });
     }

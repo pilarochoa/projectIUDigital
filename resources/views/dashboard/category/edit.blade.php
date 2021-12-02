@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="mt-5">
-    <h3 class="mb-3">Editar publicación</h3>
+    <h3 class="mb-3">Editar categoria</h3>
 
-    <form action="{{ route('category.update', $category->id) }}" method="category">
+    <form action="{{ route('category.update', $category->id) }}" method="post">
         @method('PUT')
         @include('dashboard.category.form')
         

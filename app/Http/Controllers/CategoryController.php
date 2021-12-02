@@ -16,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data['category'] = Category::paginate(10);
+        $data['categories'] = Category::paginate(10);
         return view('dashboard.category.index', $data);
     }
 
@@ -73,8 +73,8 @@ class CategoryController extends Controller
      */
     public function update(CategoryStore $request, Category $category)
     {
-        $category->update($request-> validated());
-        return back()->with('status', 'Publicación editada con éxito');
+        $category->update($request-> Validated());
+        return back()->with('status', 'Categoria actualizada con éxito');
     }
 
     /**
@@ -86,6 +86,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         Category::destroy($category->id);
-        return back()->with('status', 'Publicación eliminada con éxito');
+        return back()->with('status', 'Categoria eliminada con éxito');
 }
 }
